@@ -5,8 +5,6 @@ describe Legco::Handsard::Filters::SpeechFilter do
     let(:doc) {test_doc}
 
     before do
-      cleanup = Legco::Handsard::Filters::CleanupFilter.new
-      cleanup.process doc
       subject.process doc
     end
 
@@ -14,7 +12,7 @@ describe Legco::Handsard::Filters::SpeechFilter do
       doc.data[:speeches].should be_a(Array)
       doc.data[:speeches].should_not be_empty
 
-      binding.pry
+      # binding.pry
     end
 
   end
