@@ -1,6 +1,7 @@
 $LOAD_PATH << "lib"
 require 'legco'
 require 'vcr'
+require 'pry'
 
 VCR.configure do |c|
   c.cassette_library_dir = 'spec/fixtures/vcr'
@@ -10,4 +11,9 @@ end
 
 RSpec.configure do |c|
   c.extend VCR::RSpec::Macros
+end
+
+def test_doc
+  data = open(File.join(File.dirname(__FILE__), "fixtures/cm1121-translate-c-small.txt")).read
+  Legco::Handsard::Document.new(data)
 end
