@@ -34,7 +34,7 @@ namespace :download do
 end
 
 namespace :convert do
-  task :pdf do
+  task :txt do
     output_path = "data/txt"
     converter = Legco::Hansard::PdfConverter.new
 
