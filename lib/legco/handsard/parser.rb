@@ -1,4 +1,4 @@
-require_relative './filters/cleanup_filter'
+require_relative './filters'
 
 module Legco
   module Handsard
@@ -7,7 +7,8 @@ module Legco
 
       def initialize
         @filters = []
-        @filters << CleanupFilter.new
+        @filters << Filters::CleanupFilter.new
+        @filters << Filters::AttendeeFilter.new
       end
 
       def parse(document)
