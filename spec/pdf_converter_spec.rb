@@ -1,7 +1,7 @@
 describe Legco::Handsard::PdfConverter do
   describe "-convert" do
     # this is too slow
-    it "should convert PDF into text" do
+    pending "should convert PDF into text" do
       subject.convert("./spec/fixtures/cm1121-translate-c.pdf", "./spec/cm1121-translate-c.txt")
       File.exist?("./spec/cm1121-translate-c.txt").should be_true
     end
