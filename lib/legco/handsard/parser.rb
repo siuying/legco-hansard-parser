@@ -9,6 +9,7 @@ module Legco
         @filters = []
         @filters << Filters::CleanupFilter.new
         @filters << Filters::AttendeeFilter.new
+        @filters << Filters::DatetimeFilter.new
       end
 
       def parse(document)
