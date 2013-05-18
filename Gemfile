@@ -1,6 +1,5 @@
 source "https://rubygems.org"
 
-gem 'pdf-reader'
 gem 'nokogiri'
 gem 'json'
 

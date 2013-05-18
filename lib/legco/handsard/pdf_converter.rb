@@ -1,16 +1,10 @@
-require 'pdf-reader'
-
 module Legco
   module Handsard
     class PdfConverter
+      JAR_PATH = File.join(File.dirname(__FILE__), "../../../jar/pdfbox-app-1.8.1.jar")
+
       def convert(pdf_filename, txt_filename)
-        File.open(txt_filename, 'w:UTF-8') do |file|
-          PDF::Reader.open(pdf_filename, 'rb') do |reader|
-            reader.pages.each do |page|
-              file.write page.text
-            end
-          end
-        end
+        system("java -jar #{JAR_PATH} ExtractText -encoding \"UTF-8\" \"#{pdf_filename}\" #{txt_filename}")
       end
     end
   end
