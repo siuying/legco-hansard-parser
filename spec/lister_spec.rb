@@ -14,16 +14,34 @@ describe Legco::Handsard::Lister do
         handsard[:date].should_not be_nil
         
         handsard[:agenda].should be_a(Array)
-        handsard[:agenda].each {|url| url.should =~ %r{^http} } 
+        handsard[:agenda].each {|url| 
+          url.should =~ %r{^http} 
+          url.should =~ %r{agenda} 
+        } 
         
         handsard[:minutes].should be_a(Array)
-        handsard[:minutes].each {|url| url.should =~ %r{^http} } 
+        handsard[:minutes].each {|url| 
+          url.should =~ %r{^http} 
+          url.should =~ %r{minutes} 
+        } 
+        
+        handsard[:votings].should be_a(Array)
+        handsard[:votings].each {|url| 
+          url.should =~ %r{^http} 
+          url.should =~ %r{voting} 
+        } 
 
-        handsard[:handsard].should be_a(Array)
-        handsard[:handsard].each {|url| url.should =~ %r{^http} } 
+        handsard[:hansard].should be_a(Array)
+        handsard[:hansard].each {|url| 
+          url.should =~ %r{^http} 
+          url.should =~ %r{hansard} 
+        }  
 
         handsard[:floor].should be_a(Array)
-        handsard[:floor].each {|url| url.should =~ %r{^http} } 
+        handsard[:floor].each {|url| 
+          url.should =~ %r{^http} 
+          url.should =~ %r{floor} 
+        }   
       end
     end
   end
