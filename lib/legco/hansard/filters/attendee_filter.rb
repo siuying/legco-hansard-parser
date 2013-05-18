@@ -1,5 +1,5 @@
 module Legco
-  module Handsard
+  module Hansard
     module Filters
       class AttendeeFilter
         MEMBERS_REGEX  = %r{出席議員(.+?)(缺席議員|出席政府官員|列席秘書|提交文件|作出立法會誓言|主席：)}m

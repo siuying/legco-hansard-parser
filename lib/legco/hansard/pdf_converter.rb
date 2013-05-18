@@ -1,5 +1,5 @@
 module Legco
-  module Handsard
+  module Hansard
     class PdfConverter
       JAR_PATH = File.join(File.dirname(__FILE__), "../../../jar/pdfbox-app-1.8.1.jar")
 

@@ -1,5 +1,5 @@
 module Legco
-  module Handsard
+  module Hansard
     module Filters
       class SpeechFilter
         def process(doc)

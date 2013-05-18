@@ -1,7 +1,7 @@
 require 'json'
 
 module Legco
-  module Handsard
+  module Hansard
     class Document
       attr_accessor :text
       attr_accessor :date      

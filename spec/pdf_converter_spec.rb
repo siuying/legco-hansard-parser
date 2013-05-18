@@ -1,4 +1,4 @@
-describe Legco::Handsard::PdfConverter do
+describe Legco::Hansard::PdfConverter do
   describe "-convert" do
     # this is too slow
     pending "should convert PDF into text" do

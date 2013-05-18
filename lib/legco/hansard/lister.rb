@@ -2,7 +2,7 @@ require 'nokogiri'
 require 'open-uri'
 
 module Legco
-  module Handsard
+  module Hansard
     class Lister
       HANDSARD_URL = 'http://legco.gov.hk/general/chinese/counmtg/yr12-16/mtg_1213.htm'
 

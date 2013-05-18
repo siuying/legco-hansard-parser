@@ -1,7 +1,7 @@
 require_relative './filters'
 
 module Legco
-  module Handsard
+  module Hansard
     class Parser
       attr_accessor :filters
 

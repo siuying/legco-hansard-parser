@@ -2,7 +2,7 @@ require 'time'
 require 'pry'
 
 module Legco
-  module Handsard
+  module Hansard
     module Filters
       # Extract Date and Time of the meeting
       class DatetimeFilter

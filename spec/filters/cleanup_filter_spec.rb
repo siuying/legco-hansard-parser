@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe Legco::Handsard::Filters::CleanupFilter do
+describe Legco::Hansard::Filters::CleanupFilter do
   describe "-process" do
     it "should remove headers" do
       doc  = test_doc

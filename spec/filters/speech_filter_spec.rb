@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe Legco::Handsard::Filters::SpeechFilter do
+describe Legco::Hansard::Filters::SpeechFilter do
   describe "-process" do
     let(:doc) {test_doc}
 

@@ -1,8 +1,8 @@
 require 'spec_helper'
 
-describe Legco::Handsard::Filters::DatetimeFilter do
+describe Legco::Hansard::Filters::DatetimeFilter do
   let(:doc) {
-    Legco::Handsard::Document.new <<-EOF
+    Legco::Hansard::Document.new <<-EOF
 會議過程正式紀錄 
  
 2012年11月21日星期三 

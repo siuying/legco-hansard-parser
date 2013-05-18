@@ -15,8 +15,8 @@ end
 
 def test_doc
   data = open(File.join(File.dirname(__FILE__), "fixtures/sample.txt")).read
-  doc = Legco::Handsard::Document.new(data)
-  cleanup = Legco::Handsard::Filters::CleanupFilter.new
+  doc = Legco::Hansard::Document.new(data)
+  cleanup = Legco::Hansard::Filters::CleanupFilter.new
   cleanup.process doc
   doc
 end

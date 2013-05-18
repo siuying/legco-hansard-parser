@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe Legco::Handsard::Lister do
+describe Legco::Hansard::Lister do
   describe "-list" do
     use_vcr_cassette "list"
 
