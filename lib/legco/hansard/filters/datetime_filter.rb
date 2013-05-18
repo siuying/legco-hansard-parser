@@ -16,7 +16,7 @@ module Legco
             raise "date not found"
           end
 
-          time_matches = doc.text.match %r{(.午)\s?(.+)時(正|(.*分))會議開始}
+          time_matches = doc.text.match %r{(.午) ?([0-9]{1,2})時(正|(.*分))會議(開始|繼續)}
           if time_matches
             apm = time_matches[1]
             hour = time_matches[2]

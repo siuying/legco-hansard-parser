@@ -2,6 +2,7 @@ require 'rake'
 $LOAD_PATH << "lib"
 require 'legco'
 require 'open-uri'
+require 'fileutils'
 
 namespace :download do
   task :list do
@@ -33,29 +34,36 @@ namespace :download do
 end
 
 namespace :convert do
-  task :hansard do
+  task :pdf do
     output_path = "data/txt"
+    converter = Legco::Hansard::PdfConverter.new
 
     Dir.glob("data/pdf/*.pdf").each do |pdf|
       filename = File.basename(pdf).split(".").first + ".txt"
       output_filename = "#{output_path}/#{filename}"
 
       puts "Converting PDF: #{pdf}"
-      c = Legco::Hansard::PdfConverter.new
-      c.convert(pdf, output_filename)
+      converter.convert(pdf, output_filename)
+    end
+  end
+
+  task :json do
+    output_path = "data/json"
+    parser = Legco::Hansard::Parser.new
+
+    FileUtils.mkdir_p(output_path)
+
+    Dir.glob("data/txt/*.txt").each do |text|
+      filename = File.basename(text).split(".").first + ".json"
+      output_filename = "#{output_path}/#{filename}"
+
+      puts "Converting JSON: #{text}"
+      doc = Legco::Hansard::Document.new(open(text).read)
+      parser.parse(doc)
+
+      File.open(output_filename, 'w') do |f|
+        f.write doc.to_json
+      end
     end
   end
 end
-
-# task :convert do
-#   data = open(File.join(File.dirname(__FILE__), "./spec/fixtures/cm1121-translate-c-small.txt")).read
-#   doc = Legco::Handsard::Document.new(data)
-#   parser = Legco::Handsard::Parser.new
-#   parser.parse(doc)
-
-#   File.open("data/cm1121-translate-c.json", 'w') do |f|
-#     f.write doc.to_json
-#   end
-# end
-
-# task :default => :convert

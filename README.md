@@ -23,7 +23,7 @@ PDFs will be downloaded to ``data/pdf``
 ### Convert hansard PDF into text
 
 ```ruby
-rake convert:handsard
+rake convert:pdf
 ```
 
 PDFs at ``data/pdf`` will be converted to txt at ``data/txt``

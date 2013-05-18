@@ -21,10 +21,10 @@ module Legco
           doc.data[:absent_members] = absent_matches[1].scan(MEMBERS_NAME_REGEX).collect{|a| a[2].strip} if absent_matches
 
           public_officer_matches = doc.text.match PUBLIC_OFFICIER_REGEX
-          doc.data[:officers] = public_officer_matches[1].scan(PUBLIC_OFFICIER_NAME_REGEX).collect{|a| a[3].strip }
+          doc.data[:officers] = public_officer_matches[1].scan(PUBLIC_OFFICIER_NAME_REGEX).collect{|a| a[3].strip } if public_officer_matches
 
           clerk_matches = doc.text.match CLERK_REGEX
-          doc.data[:clerks] = clerk_matches[1].scan(CLERK_NAME_REGEX).collect{|a| a[2].strip }
+          doc.data[:clerks] = clerk_matches[1].scan(CLERK_NAME_REGEX).collect{|a| a[2].strip } if clerk_matches
         end
       end
     end
