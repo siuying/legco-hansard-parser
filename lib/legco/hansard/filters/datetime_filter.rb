@@ -7,7 +7,7 @@ module Legco
       # Extract Date and Time of the meeting
       class DatetimeFilter
         def process(doc)
-          date_matches = doc.text.match %r{會議過程正式紀錄\s*\n([0-9]{4})年([0-9]{2})月([0-9]{2})日星期.}
+          date_matches = doc.text.match %r{會議過程正式紀錄\s*\n\s*\n([0-9]{4})年 ?([0-9]{1,2})月 ?([0-9]{1,2})日星期.}
           if date_matches
             year = date_matches[1].to_i
             month = date_matches[2].to_i
@@ -16,7 +16,7 @@ module Legco
             raise "date not found"
           end
 
-          time_matches = doc.text.match %r{(.午)(.+)時(正|(.*分))會議開始}
+          time_matches = doc.text.match %r{(.午)\s?(.+)時(正|(.*分))會議開始}
           if time_matches
             apm = time_matches[1]
             hour = time_matches[2]
