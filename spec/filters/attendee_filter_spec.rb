@@ -16,7 +16,6 @@ describe Legco::Handsard::Filters::AttendeeFilter do
       doc.data[:present_members].should be_include("譚耀宗")
       doc.data[:present_members].should be_include("黃毓民")
       doc.data[:present_members].should be_include("謝偉銓")
-
     end
 
     it "should find absent members" do

@@ -15,5 +15,8 @@ end
 
 def test_doc
   data = open(File.join(File.dirname(__FILE__), "fixtures/cm1121-translate-c-small.txt")).read
-  Legco::Handsard::Document.new(data)
+  doc = Legco::Handsard::Document.new(data)
+  cleanup = Legco::Handsard::Filters::CleanupFilter.new
+  cleanup.process doc
+  doc
 end
