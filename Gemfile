@@ -2,6 +2,7 @@ source "https://rubygems.org"
 
 gem 'pdf-reader'
 gem 'nokogiri'
+gem 'json'
 
 group :development do
   gem 'rspec'

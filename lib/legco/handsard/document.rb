@@ -1,3 +1,5 @@
+require 'json'
+
 module Legco
   module Handsard
     class Document
@@ -8,6 +10,10 @@ module Legco
       def initialize(text)
         @text = text
         @data = {}
+      end
+
+      def to_json
+        JSON.pretty_generate(@data.merge({:date => date}))
       end
     end
   end

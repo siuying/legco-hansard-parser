@@ -17,6 +17,7 @@ GEM
     guard-rspec (3.0.0)
       guard (>= 1.8)
       rspec (~> 2.13)
+    json (1.7.7)
     listen (1.1.2)
       rb-fsevent (>= 0.9.3)
       rb-inotify (>= 0.9)
@@ -59,6 +60,7 @@ PLATFORMS
 DEPENDENCIES
   guard
   guard-rspec
+  json
   nokogiri
   pdf-reader
   pry
