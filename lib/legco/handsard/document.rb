@@ -2,6 +2,7 @@ module Legco
   module Handsard
     class Document
       attr_accessor :text
+      attr_accessor :date      
       attr_accessor :data
 
       def initialize(text)
