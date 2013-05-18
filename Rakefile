@@ -1,6 +1,7 @@
 require 'rake'
 $LOAD_PATH << "lib"
 require 'legco'
+require 'open-uri'
 
 namespace :download do
   task :list do
@@ -9,6 +10,23 @@ namespace :download do
 
     File.open("data/hansard_list.json", 'w') do |f|
       f.write JSON.pretty_generate data
+    end
+  end
+
+  # download hansard as pdf
+  task :handsard do 
+    output_path = "data/pdf"
+
+    data = JSON(open("data/hansard_list.json").read)
+    data.each do |meeting|
+      meeting["hansard"].each do |url|
+        filename = File.basename(url)
+        output_file = "#{output_path}/#{filename}"
+
+        unless File.exists?(output_file)
+          system "wget \"#{url}\" -O \"#{output_file}\""
+        end
+      end
     end
   end
 end
