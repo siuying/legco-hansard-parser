@@ -23,6 +23,7 @@ namespace :download do
         filename = File.basename(url)
         output_file = "#{output_path}/#{filename}"
 
+        puts "Download PDF: #{url}"
         unless File.exists?(output_file)
           system "wget \"#{url}\" -O \"#{output_file}\""
         end
@@ -31,15 +32,30 @@ namespace :download do
   end
 end
 
-task :convert do
-  data = open(File.join(File.dirname(__FILE__), "./spec/fixtures/cm1121-translate-c-small.txt")).read
-  doc = Legco::Handsard::Document.new(data)
-  parser = Legco::Handsard::Parser.new
-  parser.parse(doc)
+namespace :convert do
+  task :hansard do
+    output_path = "data/txt"
 
-  File.open("data/cm1121-translate-c.json", 'w') do |f|
-    f.write doc.to_json
+    Dir.glob("data/pdf/*.pdf").each do |pdf|
+      filename = File.basename(pdf).split(".").first + ".txt"
+      output_filename = "#{output_path}/#{filename}"
+
+      puts "Converting PDF: #{pdf}"
+      c = Legco::Hansard::PdfConverter.new
+      c.convert(pdf, output_filename)
+    end
   end
 end
 
-task :default => :convert
+# task :convert do
+#   data = open(File.join(File.dirname(__FILE__), "./spec/fixtures/cm1121-translate-c-small.txt")).read
+#   doc = Legco::Handsard::Document.new(data)
+#   parser = Legco::Handsard::Parser.new
+#   parser.parse(doc)
+
+#   File.open("data/cm1121-translate-c.json", 'w') do |f|
+#     f.write doc.to_json
+#   end
+# end
+
+# task :default => :convert
