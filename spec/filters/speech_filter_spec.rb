@@ -11,9 +11,7 @@ describe Legco::Hansard::Filters::SpeechFilter do
     it "should extract speech" do
       doc.data[:speeches].should be_a(Array)
       doc.data[:speeches].should_not be_empty
-
-      # binding.pry
+      puts doc.data[:speeches].collect{|s| s[:speaker]}
     end
-
   end
 end

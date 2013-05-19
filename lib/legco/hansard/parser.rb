@@ -10,6 +10,8 @@ module Legco
         @filters << Filters::CleanupFilter.new
         @filters << Filters::AttendeeFilter.new
         @filters << Filters::DatetimeFilter.new
+        @filters << Filters::SpeechFilter.new
+
       end
 
       def parse(document)
