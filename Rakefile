@@ -21,8 +21,11 @@ namespace :download do
     data = JSON(open("data/hansard_list.json").read)
     data.each do |meeting|
       meeting["hansard"].each do |url|
+        match = url.match(%r{/yr([0-9\-]+?)/})
+        year = match ? match[1] : ""
+
         filename = File.basename(url)
-        output_file = "#{output_path}/#{filename}"
+        output_file = "#{output_path}/#{year}-#{filename}"
 
         puts "Download PDF: #{url}"
         unless File.exists?(output_file)
