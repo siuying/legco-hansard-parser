@@ -18,6 +18,9 @@ class PageRenderer
     $("#presented_members").html(presentMembers.join(''))
     $("#absent_members").html(absentMembers.join(''))
 
+    date = new Date(data.date)
+    $("#time").html("#{date.getFullYear()}年 #{date.getMonth()+1}月 #{date.getDate()}日")
+
   renderEvents: (events) ->
     console.log('render events');
     output = for event in events

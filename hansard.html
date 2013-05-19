@@ -16,7 +16,6 @@
     <script type="text/javascript" src="javascripts/app.js"></script>
     <script type="text/javascript">
       $(document).ready(function () {
-        console.log('begin load');
         var renderer = new PageRenderer();
         renderer.load("data/json/12-13-cm0109-translate-c.json");
       })
@@ -31,8 +30,8 @@
       <header>
         <span class="ribbon-outer">
           <span class="ribbon-inner">
-            <h1></h1>
-            <h2></h2>
+            <h1 id="name">會議過程正式紀錄</h1>
+            <h2 id="time"></h2>
           </span>
           <span class="left-tail"></span>
           <span class="right-tail"></span>
@@ -40,7 +39,7 @@
       </header>
 
       <section id="downloads">
-        <span class="inner">
+        <span class="inner" id="time">
         </span>
       </section>
 

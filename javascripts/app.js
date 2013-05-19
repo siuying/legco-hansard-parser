@@ -25,7 +25,7 @@
     };
 
     PageRenderer.prototype.renderHeader = function(data) {
-      var absentMembers, member, presentMembers;
+      var absentMembers, date, member, presentMembers;
 
       presentMembers = (function() {
         var _i, _len, _ref, _results;
@@ -50,7 +50,9 @@
         return _results;
       })();
       $("#presented_members").html(presentMembers.join(''));
-      return $("#absent_members").html(absentMembers.join(''));
+      $("#absent_members").html(absentMembers.join(''));
+      date = new Date(data.date);
+      return $("#time").html("" + (date.getFullYear()) + "年 " + (date.getMonth() + 1) + "月 " + (date.getDate()) + "日");
     };
 
     PageRenderer.prototype.renderEvents = function(events) {
