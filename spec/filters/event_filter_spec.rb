@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe Legco::Hansard::Filters::SpeechFilter do
+describe Legco::Hansard::Filters::EventFilter do
   describe "-process" do
     let(:doc) {
       test_doc "fixtures/cm1121-translate-c-small.txt"
@@ -11,10 +11,10 @@ describe Legco::Hansard::Filters::SpeechFilter do
     end
 
     it "should extract speech" do
-      doc.data[:speeches].should be_a(Array)
-      doc.data[:speeches].should_not be_empty
+      doc.data[:events].should be_a(Array)
+      doc.data[:events].should_not be_empty
 
-      speeches = doc.data[:speeches].select {|sp| sp[:type] == :speech}
+      speeches = doc.data[:events].select {|sp| sp[:type] == :speech}
 
       speech = speeches.first
       speech[:speaker][:title].should == "主席"
@@ -49,17 +49,17 @@ describe Legco::Hansard::Filters::SpeechFilter do
     end
 
     it "should extract action" do
-      doc.data[:speeches].should be_a(Array)
-      doc.data[:speeches].should_not be_empty
+      doc.data[:events].should be_a(Array)
+      doc.data[:events].should_not be_empty
 
-      speeches = doc.data[:speeches]
+      events = doc.data[:events]
 
-      speech = speeches.first
-      speech[:type].should == :speech
+      event = events.first
+      event[:type].should == :speech
 
-      speech = speeches[1]
-      speech[:type].should == :action
-      speech[:text].should == "在傳召鐘響後，多位議員進入會議廳"
+      event = events[1]
+      event[:type].should == :action
+      event[:text].should == "在傳召鐘響後，多位議員進入會議廳"
     end
   end
 end
