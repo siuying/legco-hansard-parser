@@ -8,7 +8,7 @@ Convert Legco hansard document PDF into texts, and then convert them into struct
 - Convert hansard PDF into TXT
 - Convert hansard TXT into JSON
   - Extract meta data (date, present members, absent members, officials and clerks) from TXT
-  - TODO: Extract speech data
+  - Extract speech and actions data
   - TODO: Extract voting data
   - ... etc
 
