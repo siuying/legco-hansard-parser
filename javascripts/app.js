@@ -119,20 +119,14 @@
     };
 
     PageRenderer.prototype.renderEvents = function(events) {
-      var event, html, output;
+      var event, _i, _len, _results;
 
-      output = (function() {
-        var _i, _len, _results;
-
-        _results = [];
-        for (_i = 0, _len = events.length; _i < _len; _i++) {
-          event = events[_i];
-          _results.push(this.renderEvent(event));
-        }
-        return _results;
-      }).call(this);
-      html = output.join('');
-      return $("#events").append(html);
+      _results = [];
+      for (_i = 0, _len = events.length; _i < _len; _i++) {
+        event = events[_i];
+        _results.push(this.renderEvent(event));
+      }
+      return _results;
     };
 
     PageRenderer.prototype.renderEvent = function(event) {
@@ -158,7 +152,7 @@
         text = "<div class='text'>" + event.text + "</div>";
         output = "<div class='event action'>" + text + "</div>";
       }
-      return output;
+      return $("#events").append(output);
     };
 
     return PageRenderer;

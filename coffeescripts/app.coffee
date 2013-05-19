@@ -48,10 +48,8 @@ class PageRenderer
     $("#time").html("#{date.getFullYear()}年 #{date.getMonth()+1}月 #{date.getDate()}日")
 
   renderEvents: (events) ->
-    output = for event in events
+    for event in events
       @renderEvent(event)
-    html = output.join('')
-    $("#events").append(html)
 
   renderEvent: (event) ->
     output = ""
@@ -70,6 +68,6 @@ class PageRenderer
     else
       text = "<div class='text'>#{event.text}</div>"
       output = "<div class='event action'>#{text}</div>"
-    return output
+    $("#events").append(output)
 
 window.PageRenderer = PageRenderer
