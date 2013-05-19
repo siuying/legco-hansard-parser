@@ -12,9 +12,11 @@
     <script type="text/javascript" src="javascripts/modernizr.js"></script>
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
     <script type="text/javascript" src="javascripts/headsmart.min.js"></script>
+    <script type="text/javascript" src="javascripts/app.js"></script>
     <script type="text/javascript">
       $(document).ready(function () {
-        $('#main_content').headsmart()
+        //$('#main_content').headsmart()
+        PageController.load()
       })
     </script>
     <title>立法會會議過程正式紀錄</title>
@@ -47,7 +49,8 @@
 
 
       <section id="main_content">
-        <div id="links">
+        <div>
+          <ul id="links"></ul>
         </div>
       </section>
 

@@ -1,4 +1,20 @@
 class PageController
+  @load: ->
+    $.ajax(url: 'data/hansard_list.json', dataType: 'json').done (data) =>
+      @renderList(data)
+
+  @renderList: (data) ->
+    links = $("#links")
+    for item in data
+      console.log("item: #{item}")
+      name = item.date
+      for url in item.hansard
+        console.log(" #{url}")
+        parts = url.split("/")
+        filename = parts[parts.length - 1]
+        basename = filename.split(".")[0]
+        links.append("<li><a href='hansard.html#12-13-#{basename}'>#{name}</a></li>")
+
   @pageToLoad: ->
     url = document.location.toString()
     if url.indexOf("#") >= 0
@@ -18,14 +34,15 @@ class PageRenderer
     @renderEvents(data.events)
 
   renderHeader: (data) ->
-    presentMembers = for member in data.present_members
-      "<span class='member'>#{member}</span>"
+    if data.present_members
+      presentMembers = for member in data.present_members
+        "<span class='member'>#{member}</span>"
+      $("#presented_members").html(presentMembers.join(''))
 
-    absentMembers = for member in data.absent_members
-      "<span class='member absent'>#{member}</span>"
-
-    $("#presented_members").html(presentMembers.join(''))
-    $("#absent_members").html(absentMembers.join(''))
+    if data.absent_members
+      absentMembers = for member in data.absent_members
+        "<span class='member absent'>#{member}</span>"
+      $("#absent_members").html(absentMembers.join(''))
 
     date = new Date(data.date)
     $("#time").html("#{date.getFullYear()}年 #{date.getMonth()+1}月 #{date.getDate()}日")
