@@ -53,6 +53,7 @@ GEM
     slop (3.4.4)
     spoon (0.0.4)
       ffi
+    state_machine (1.2.0)
     thor (0.18.1)
     vcr (2.4.0)
     webmock (1.9.3)
@@ -71,5 +72,6 @@ DEPENDENCIES
   pry
   rake
   rspec
+  state_machine
   vcr
   webmock (~> 1.9.0)

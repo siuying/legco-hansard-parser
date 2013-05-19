@@ -2,6 +2,7 @@ source "https://rubygems.org"
 
 gem 'nokogiri'
 gem 'json'
+gem 'state_machine'
 
 group :development do
   gem 'rspec'
