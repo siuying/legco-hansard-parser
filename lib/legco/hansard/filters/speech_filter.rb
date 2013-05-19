@@ -5,7 +5,7 @@ module Legco
       class SpeechFilter
         attr_reader :speeches
 
-        SPEECH_REGEX = %r{^[0-9]*\.?(.*(主席|局長|議員|司長))：(.+)}
+        SPEECH_REGEX = %r{^[0-9]*\.?((.*)(主席|議員|局長|司長))：(.+)}
 
         state_machine :state, :initial => :header do
           event :speak do
@@ -26,9 +26,20 @@ module Legco
               match = line.match SPEECH_REGEX
               if match
                 flush
-                @current_speaker = match[1].strip
+                full = match[1].strip
+                name = match[2].strip
+                title = match[3].strip 
+
+                # they dont list full name of 局長/司長
+                if title =~ %r{(局長|司長)$}
+                  name = nil 
+                  title = full
+                end
+                name = nil if name == ""
+
+                @current_speaker = {:full => full, :name => name, :title => title }
                 @current_text = []
-                @current_text << match[3].strip
+                @current_text << match[4].strip
               else
                 @current_text << line.strip
               end
@@ -37,6 +48,7 @@ module Legco
 
           state :supplementing do
             def process_line(line)
+              @current_supplement << line.strip
             end
           end
         end
@@ -45,6 +57,7 @@ module Legco
           @current_speaker = nil
           @current_text = []
           @speeches = []
+          @current_supplement = []
           super()
         end
 
@@ -72,8 +85,12 @@ module Legco
           if @current_text.size > 0 && @current_speaker
             @speeches << {
               :speaker => @current_speaker, 
-              :text => @current_text.join("\n")
+              :text => @current_text.join("\n"),
+              :supplement => @current_supplement.size > 0 ? @current_supplement.join("\n") : nil
             }
+            @current_supplement = []
+            @current_text = []
+            @current_speaker = nil
           end
         end
       end
