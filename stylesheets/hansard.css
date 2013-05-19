@@ -1,0 +1,21 @@
+body {
+  font-size: 16px;
+}
+
+#main_content h3.header-level-1 {
+  font-style: normal;
+}
+
+div.speech {
+  padding: 8px;
+}
+
+#events .speech .speaker {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+#events .action .text {
+  font-size: 18px;
+  font-style: italic;
+}
