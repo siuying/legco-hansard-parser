@@ -57,12 +57,16 @@ class PageRenderer
     output = ""
     if event.type == "speech"
       speaker = "<div class='speaker'>#{event.speaker.full}</div>"
-      text = "<div class='text'>#{event.text}</div>"
-      if supplement
-        supplement = "<div class='supplement'>#{event.supplement}</div>"
-      else
-        supplement = ""
-      output = "<div class='event speech'><pre>#{speaker}#{text}#{supplement}</pre></div>"
+      text = event.text
+      supplement = event.supplement
+
+      text = "" unless text
+      supplement = "" unless supplement
+
+      if (text && text != "") || (supplement && supplement != "")
+        text = "<div class='text'>#{text}</div>"
+        supplement = "<div class='supplement'>#{supplement}</div>"
+        output = "<div class='event speech'><pre>#{speaker}#{text}#{supplement}</pre></div>"
     else
       text = "<div class='text'>#{event.text}</div>"
       output = "<div class='event action'>#{text}</div>"
