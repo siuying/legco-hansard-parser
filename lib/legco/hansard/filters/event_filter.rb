@@ -127,12 +127,16 @@ module Legco
 
         def flush
           if @current_text.size > 0 && @current_speaker
-            @events << {
-              :type => :speech,
-              :speaker => @current_speaker, 
-              :text => @current_text.join("\n"),
-              :supplement => @current_supplement.size > 0 ? @current_supplement.join("\n").strip : nil
-            }
+            text = @current_text.join("\n").strip
+            supplement = @current_supplement.size > 0 ? @current_supplement.join("\n").strip : nil
+            if text != "" || supplement != ""
+              @events << {
+                :type => :speech,
+                :speaker => @current_speaker, 
+                :text => text,
+                :supplement => supplement
+              }
+            end
             @current_supplement = []
             @current_text = []
           end
