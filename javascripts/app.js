@@ -45,7 +45,7 @@
         _results = [];
         for (_i = 0, _len = _ref.length; _i < _len; _i++) {
           member = _ref[_i];
-          _results.push("<span class='abs_member'>" + member + "</span>");
+          _results.push("<span class='member absent'>" + member + "</span>");
         }
         return _results;
       })();

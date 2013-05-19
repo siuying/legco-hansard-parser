@@ -13,7 +13,7 @@ class PageRenderer
       "<span class='member'>#{member}</span>"
 
     absentMembers = for member in data.absent_members
-      "<span class='abs_member'>#{member}</span>"
+      "<span class='member absent'>#{member}</span>"
 
     $("#presented_members").html(presentMembers.join(''))
     $("#absent_members").html(absentMembers.join(''))

@@ -19,3 +19,14 @@ div.speech {
   font-size: 18px;
   font-style: italic;
 }
+
+.member {
+  background: lightGrey;
+  border-radius: 4px;
+  padding: 2px;
+  margin-right: 4px;
+}
+
+.member.absent {
+  background: #ff9999;
+}
