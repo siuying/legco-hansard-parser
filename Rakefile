@@ -52,11 +52,10 @@ namespace :convert do
 
   task :json do
     output_path = "data/json"
-    parser = Legco::Hansard::Parser.new
-
     FileUtils.mkdir_p(output_path)
 
     Dir.glob("data/txt/*.txt").each do |text|
+      parser = Legco::Hansard::Parser.new
       filename = File.basename(text).split(".").first + ".json"
       output_filename = "#{output_path}/#{filename}"
 
