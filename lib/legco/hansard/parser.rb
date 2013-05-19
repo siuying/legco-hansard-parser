@@ -10,7 +10,7 @@ module Legco
         @filters << Filters::CleanupFilter.new
         @filters << Filters::AttendeeFilter.new
         @filters << Filters::DatetimeFilter.new
-        @filters << Filters::SpeechFilter.new
+        @filters << Filters::EventFilter.new
 
       end
 

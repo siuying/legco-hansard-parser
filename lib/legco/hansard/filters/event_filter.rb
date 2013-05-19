@@ -2,12 +2,14 @@ require 'state_machine'
 module Legco
   module Hansard
     module Filters
-      # extract speeches from hansard
-      class SpeechFilter
-        attr_reader :speeches
+      # extract events from hansard
+      # events include speech and action
+      class EventFilter
+        attr_reader :events
 
         SPEECH_REGEX = %r{^[0-9]*\.?((.*)(代理主席|行政長官|主席|議員|局長|司長))：(.+)}
         NOT_SPEECH_REGEX = %r{^(出席議員|缺席議員|出席政府官員|列席秘書)}
+
         ACT_BEGIN_REGEX = %r{^\(([^\)]+)\)?\s*$}
         ACT_END_REGEX = %r{([^\)]+)\)\s*$}
 
@@ -89,8 +91,8 @@ module Legco
 
         def initialize
           @current_speaker = nil
+          @events = []
           @current_text = []
-          @speeches = []
           @current_supplement = []
           @actions = []
           super()
@@ -103,7 +105,7 @@ module Legco
           end
           flush
 
-          doc.data[:speeches] = speeches
+          doc.data[:events] = events
         end
 
         # check a line and change state if needed
@@ -125,7 +127,7 @@ module Legco
 
         def flush
           if @current_text.size > 0 && @current_speaker
-            @speeches << {
+            @events << {
               :type => :speech,
               :speaker => @current_speaker, 
               :text => @current_text.join("\n"),
@@ -138,7 +140,7 @@ module Legco
           if @actions.size > 0
             text = @actions.join("\n").strip
             if text != ""
-              @speeches << {
+              @events << {
                 :type => :action,
                 :text => @actions.join("\n").strip
               }
