@@ -7,6 +7,7 @@ module Legco
         attr_reader :speeches
 
         SPEECH_REGEX = %r{^[0-9]*\.?((.*)(代理主席|行政長官|主席|議員|局長|司長))：(.+)}
+        NOT_SPEECH_REGEX = %r{^(出席議員|缺席議員|出席政府官員|列席秘書)}
         ACT_BEGIN_REGEX = %r{^\(([^\)]+)\)?\s*$}
         ACT_END_REGEX = %r{([^\)]+)\)\s*$}
 
@@ -35,12 +36,18 @@ module Legco
               match = line.match(ACT_BEGIN_REGEX)
               if match
                 @actions << match[1]
+
+                if line.match(ACT_END_REGEX)
+                  speak
+                end
+
                 return
               end
 
               match = line.match(ACT_END_REGEX)
               if match
                 @actions << match[1]
+                speak
                 return
               end
 
@@ -101,9 +108,9 @@ module Legco
 
         # check a line and change state if needed
         def peek_line(line)
-          if line.match %r{^(提交文件|附件)}
+          if line.match %r{^(提交文件|附件|註)}
             supplement
-          elsif line.match %r{^主席：}
+          elsif line.match(SPEECH_REGEX) && !line.match(NOT_SPEECH_REGEX)
             speak
           elsif line.match %r{^\([^\)]+\)?\s*$}
             if speaking?
@@ -129,10 +136,14 @@ module Legco
           end
 
           if @actions.size > 0
-            @speeches << {
-              :type => :action,
-              :text => @actions.join("\n").strip
-            }
+            text = @actions.join("\n").strip
+            if text != ""
+              @speeches << {
+                :type => :action,
+                :text => @actions.join("\n").strip
+              }
+            end
+
             @actions = []
           end
         end

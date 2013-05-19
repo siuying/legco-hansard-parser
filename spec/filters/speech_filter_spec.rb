@@ -21,23 +21,25 @@ describe Legco::Hansard::Filters::SpeechFilter do
       speech[:speaker][:name].should == nil
       speech[:speaker][:full].should == "主席"
       speech[:text].should be_include("秘書，請響鐘傳召議員進入會議廳。")
-      speech[:supplement].should be_include("下列文件是根據《議事規則》第21(2)條")
 
       speech = speeches[1]
+      speech[:supplement].should be_include("下列文件是根據《議事規則》第21(2)條")
+
+      speech = speeches[2]
       speech[:speaker][:title].should == "主席"
       speech[:speaker][:name].should == nil
       speech[:speaker][:full].should == "主席"
       speech[:text].should be_include("質詢。第一項質詢。")
       speech[:supplement].should be_nil
 
-      speech = speeches[2]
+      speech = speeches[3]
       speech[:speaker][:title].should == "議員"
       speech[:speaker][:name].should == "林健鋒"
       speech[:speaker][:full].should == "林健鋒議員"
       speech[:text].should be_include("據報，法定最低工資的實施改變了勞動市場的薪酬")
       speech[:text].should be_include("若有調查，物價的升幅為")
 
-      speech = speeches[3]
+      speech = speeches[4]
       speech[:speaker][:title].should == "勞工及福利局局長"
       speech[:speaker][:name].should == nil
       speech[:speaker][:full].should == "勞工及福利局局長"
