@@ -1,10 +1,19 @@
+class PageController
+  @pageToLoad: ->
+    url = document.location.toString()
+    if url.indexOf("#") >= 0
+      hash = url.substring(url.indexOf("#")+1)
+      "data/json/#{hash}.json"
+    else
+      "data/json/12-13-cm0109-translate-c.json"
+window.PageController = PageController
+
 class PageRenderer
   load: (file) ->
     $.ajax(url: file, dataType: 'json').done (data) =>
       @render(data)
 
   render: (data) =>
-    console.log "render data:"
     @renderHeader(data)
     @renderEvents(data.events)
 
@@ -22,7 +31,6 @@ class PageRenderer
     $("#time").html("#{date.getFullYear()}年 #{date.getMonth()+1}月 #{date.getDate()}日")
 
   renderEvents: (events) ->
-    console.log('render events');
     output = for event in events
       @renderEvent(event)
     html = output.join('')

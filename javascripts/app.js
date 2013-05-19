@@ -1,6 +1,27 @@
 (function() {
-  var PageRenderer,
+  var PageController, PageRenderer,
     __bind = function(fn, me){ return function(){ return fn.apply(me, arguments); }; };
+
+  PageController = (function() {
+    function PageController() {}
+
+    PageController.pageToLoad = function() {
+      var hash, url;
+
+      url = document.location.toString();
+      if (url.indexOf("#") >= 0) {
+        hash = url.substring(url.indexOf("#") + 1);
+        return "data/json/" + hash + ".json";
+      } else {
+        return "data/json/12-13-cm0109-translate-c.json";
+      }
+    };
+
+    return PageController;
+
+  })();
+
+  window.PageController = PageController;
 
   PageRenderer = (function() {
     function PageRenderer() {
@@ -19,7 +40,6 @@
     };
 
     PageRenderer.prototype.render = function(data) {
-      console.log("render data:");
       this.renderHeader(data);
       return this.renderEvents(data.events);
     };
@@ -58,7 +78,6 @@
     PageRenderer.prototype.renderEvents = function(events) {
       var event, html, output;
 
-      console.log('render events');
       output = (function() {
         var _i, _len, _results;
 

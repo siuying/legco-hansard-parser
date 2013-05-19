@@ -16,11 +16,14 @@
     <script type="text/javascript" src="javascripts/app.js"></script>
     <script type="text/javascript">
       $(document).ready(function () {
+        var name = PageController.pageToLoad();
+        console.log("load:", name);
+
         var renderer = new PageRenderer();
-        renderer.load("data/json/12-13-cm0109-translate-c.json");
+        renderer.load(name);
       })
     </script>
-    <title>Legco-hansard-parser by siuying</title>
+    <title>會議過程正式紀錄</title>
   </head>
 
   <body>
@@ -40,6 +43,8 @@
 
       <section id="downloads">
         <span class="inner" id="time">
+          <a href="#" class="zip"></a>
+          <a href="#" class="tgz"></a>
         </span>
       </section>
 
