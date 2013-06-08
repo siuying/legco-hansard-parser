@@ -25,7 +25,7 @@ File ``data/hansard_list.json`` will be created.
 ### Download hansard PDF
 
 ```ruby
-rake download:handsard
+rake download:hansard
 ```
 
 PDFs will be downloaded to ``data/pdf``

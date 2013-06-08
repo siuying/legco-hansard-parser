@@ -6,7 +6,7 @@ require 'fileutils'
 
 namespace :download do
   task :list do
-    lister = Legco::Handsard::Lister.new
+    lister = Legco::Hansard::Lister.new
     data = lister.list
 
     File.open("data/hansard_list.json", 'w') do |f|
@@ -15,7 +15,7 @@ namespace :download do
   end
 
   # download hansard as pdf
-  task :handsard do 
+  task :hansard do 
     output_path = "data/pdf"
 
     data = JSON(open("data/hansard_list.json").read)
