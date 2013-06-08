@@ -6,7 +6,7 @@ require 'fileutils'
 
 namespace :download do
   task :list do
-    lister = Legco::Handsard::Lister.new
+    lister = Legco::Hansard::Lister.new
     data = lister.list
 
     File.open("data/hansard_list.json", 'w') do |f|
