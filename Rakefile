@@ -15,7 +15,7 @@ namespace :download do
   end
 
   # download hansard as pdf
-  task :handsard do 
+  task :hansard do 
     output_path = "data/pdf"
 
     data = JSON(open("data/hansard_list.json").read)
