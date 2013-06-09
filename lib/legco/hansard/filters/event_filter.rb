@@ -1,4 +1,4 @@
-require 'state_machine'
+﻿require 'state_machine'
 module Legco
   module Hansard
     module Filters
