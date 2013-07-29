@@ -1,4 +1,4 @@
-require 'spec_helper'
+﻿require 'spec_helper'
 
 describe Legco::Hansard::Filters::CleanupFilter do
   describe "-process" do

@@ -1,4 +1,4 @@
-module Legco
+﻿module Legco
   module Hansard
     module Filters
       class CleanupFilter

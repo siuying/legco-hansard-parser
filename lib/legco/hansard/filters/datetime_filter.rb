@@ -1,4 +1,4 @@
-require 'time'
+﻿require 'time'
 require 'pry'
 
 module Legco
