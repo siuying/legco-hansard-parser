@@ -1,5 +1,5 @@
+# encoding: utf-8
 require 'time'
-require 'pry'
 
 module Legco
   module Hansard
