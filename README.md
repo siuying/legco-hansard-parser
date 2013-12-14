@@ -12,6 +12,13 @@ Convert Legco hansard document PDF into texts, and then convert them into struct
   - TODO: Extract voting data
   - ... etc
 
+## Dependencies
+
+This project dependent on following tools:
+
+- Ruby 2.0.0 (for the app)
+- Java Runtime Environment (for pdfbox)
+
 ## Usage
 
 ### List available hansard documents
