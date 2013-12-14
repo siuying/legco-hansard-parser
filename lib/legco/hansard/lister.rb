@@ -8,10 +8,12 @@ module Legco
 
       def list
         doc = Nokogiri::HTML(open(HANDSARD_URL))
-        hansard_table = doc.css("#hansard").first.parent
-        hansard_table.css("table")[3].css("tr").collect do |row|
+        hansard_table = doc.css("table").find {|table| table.xpath("./tr/th[2]").text == "會議議程" }
+        raise "Handsard table not found!" unless hansard_table
+
+        hansard_table.css("tr").collect do |row|
           columns = row.css("td") 
-          if columns && columns.size == 5
+          if columns && columns.size == 6
             date = columns[0].text.strip
             agenda = columns[1].css("a").collect {|a| URI.join(HANDSARD_URL, a["href"]).to_s }
             minutes = columns[2].css("a").collect {|a| URI.join(HANDSARD_URL, a["href"]).to_s }.select {|url| url =~ %r{minutes} }

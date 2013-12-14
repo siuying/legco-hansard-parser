@@ -26,7 +26,7 @@
       "http://legco.gov.hk/yr12-13/chinese/counmtg/minutes/cm20121017.pdf"
     ],
     "votings": [
-      "http://legco.gov.hk/yr12-13/chinese/counmtg/voting/v20121017.pdf"
+
     ],
     "hansard": [
       "http://legco.gov.hk/yr12-13/chinese/counmtg/hansard/cm1017-translate-c.pdf",
@@ -46,7 +46,7 @@
       "http://legco.gov.hk/yr12-13/chinese/counmtg/minutes/cm20121024.pdf"
     ],
     "votings": [
-      "http://legco.gov.hk/yr12-13/chinese/counmtg/voting/v20121024.pdf"
+
     ],
     "hansard": [
       "http://legco.gov.hk/yr12-13/chinese/counmtg/hansard/cm1024-translate-c.pdf",
@@ -66,7 +66,7 @@
       "http://legco.gov.hk/yr12-13/chinese/counmtg/minutes/cm20121031.pdf"
     ],
     "votings": [
-      "http://legco.gov.hk/yr12-13/chinese/counmtg/voting/v20121031.pdf"
+
     ],
     "hansard": [
       "http://legco.gov.hk/yr12-13/chinese/counmtg/hansard/cm1031-translate-c.pdf"
@@ -76,7 +76,7 @@
     ]
   },
   {
-    "date": "2012 年 11 月 1 日^^",
+    "date": "2012 年 11 月 1 日^^註釋符號代表...行政長官答問會",
     "agenda": [
       "http://legco.gov.hk/yr12-13/chinese/counmtg/agenda/cm20121101.htm"
     ],
@@ -102,7 +102,7 @@
       "http://legco.gov.hk/yr12-13/chinese/counmtg/minutes/cm20121107.pdf"
     ],
     "votings": [
-      "http://legco.gov.hk/yr12-13/chinese/counmtg/voting/v20121107.pdf"
+
     ],
     "hansard": [
       "http://legco.gov.hk/yr12-13/chinese/counmtg/hansard/cm1107-translate-c.pdf"
@@ -120,7 +120,7 @@
       "http://legco.gov.hk/yr12-13/chinese/counmtg/minutes/cm20121114.pdf"
     ],
     "votings": [
-      "http://legco.gov.hk/yr12-13/chinese/counmtg/voting/v20121114.pdf"
+
     ],
     "hansard": [
       "http://legco.gov.hk/yr12-13/chinese/counmtg/hansard/cm1114-translate-c.pdf"
@@ -138,7 +138,7 @@
       "http://legco.gov.hk/yr12-13/chinese/counmtg/minutes/cm20121121.pdf"
     ],
     "votings": [
-      "http://legco.gov.hk/yr12-13/chinese/counmtg/voting/v20121121.pdf"
+
     ],
     "hansard": [
       "http://legco.gov.hk/yr12-13/chinese/counmtg/hansard/cm1121-translate-c.pdf"
@@ -188,7 +188,7 @@
     ]
   },
   {
-    "date": "2012 年 12 月 10 日^^",
+    "date": "2012 年 12 月 10 日^^註釋符號代表...行政長官答問會",
     "agenda": [
       "http://legco.gov.hk/yr12-13/chinese/counmtg/agenda/cm20121210.htm"
     ],
@@ -264,7 +264,7 @@
     ]
   },
   {
-    "date": "2013 年 1 月 16 日@",
+    "date": "2013 年 1 月 16 日@註釋符號代表...行政長官發表施政報告",
     "agenda": [
       "http://legco.gov.hk/yr12-13/chinese/counmtg/agenda/cm20130116.htm"
     ],
@@ -282,7 +282,7 @@
     ]
   },
   {
-    "date": "2013 年 1 月 17 日^^",
+    "date": "2013 年 1 月 17 日^^註釋符號代表...行政長官答問會",
     "agenda": [
       "http://legco.gov.hk/yr12-13/chinese/counmtg/agenda/cm20130117.htm"
     ],
@@ -320,7 +320,7 @@
     ]
   },
   {
-    "date": "2013 年 1 月 30 、 31 及2013 年 2 月 1 日@@",
+    "date": "2013 年 1 月 30、31 及2013 年 2 月 1 日@@註釋符號代表...施政報告議案辯論",
     "agenda": [
       "http://legco.gov.hk/yr12-13/chinese/counmtg/agenda/cm20130130.htm"
     ],
@@ -380,7 +380,7 @@
     ]
   },
   {
-    "date": "2013 年 2 月 27 日#",
+    "date": "2013 年 2 月 27 日#註釋符號代表...第一次財政預算案會議(財政司司長發表財政預算案)",
     "agenda": [
       "http://legco.gov.hk/yr12-13/chinese/counmtg/agenda/cm20130227.htm"
     ],
@@ -434,7 +434,7 @@
     ]
   },
   {
-    "date": "2013 年 4 月 17 及 18 日##",
+    "date": "2013 年 4 月 17 及 18 日##註釋符號代表...第二次財政預算案會議(議員發言)",
     "agenda": [
       "http://legco.gov.hk/yr12-13/chinese/counmtg/agenda/cm20130417.htm"
     ],
@@ -452,7 +452,7 @@
     ]
   },
   {
-    "date": "2013 年 4 月 24、 25、 26、 29、 30 及2013 年 5 月 2 日###",
+    "date": "2013 年 4 月 24、25、26、29、30 及2013 年 5 月 2 日###註釋符號代表...第三次財政預算案會議(政府當局回應及《2013年撥款條例草案》的最後階段)",
     "agenda": [
       "http://legco.gov.hk/yr12-13/chinese/counmtg/agenda/cm20130424.htm"
     ],
@@ -464,7 +464,11 @@
     ],
     "hansard": [
       "http://legco.gov.hk/yr12-13/chinese/counmtg/hansard/cm0424-translate-c.pdf",
-      "http://legco.gov.hk/yr12-13/chinese/counmtg/hansard/cm0425-translate-c.pdf"
+      "http://legco.gov.hk/yr12-13/chinese/counmtg/hansard/cm0425-translate-c.pdf",
+      "http://legco.gov.hk/yr12-13/chinese/counmtg/hansard/cm0426-translate-c.pdf",
+      "http://legco.gov.hk/yr12-13/chinese/counmtg/hansard/cm0429-translate-c.pdf",
+      "http://legco.gov.hk/yr12-13/chinese/counmtg/hansard/cm0430-translate-c.pdf",
+      "http://legco.gov.hk/yr12-13/chinese/counmtg/hansard/cm0502-translate-c.pdf"
     ],
     "floor": [
       "http://legco.gov.hk/yr12-13/chinese/counmtg/floor/cm0424-confirm-ec.pdf",
@@ -476,27 +480,33 @@
     ]
   },
   {
-    "date": "2013 年 5 月 8、 9、 10、 13 及 14 日",
+    "date": "2013 年 5 月 8、9、10、13 及 14 日",
     "agenda": [
       "http://legco.gov.hk/yr12-13/chinese/counmtg/agenda/cm20130508.htm"
     ],
     "minutes": [
-
+      "http://legco.gov.hk/yr12-13/chinese/counmtg/minutes/cm20130508.pdf"
     ],
     "votings": [
-      "http://legco.gov.hk/yr12-13/chinese/counmtg/voting/v20130508.htm"
+
     ],
     "hansard": [
-
+      "http://legco.gov.hk/yr12-13/chinese/counmtg/hansard/cm0508-translate-c.pdf",
+      "http://legco.gov.hk/yr12-13/chinese/counmtg/hansard/cm0509-translate-c.pdf",
+      "http://legco.gov.hk/yr12-13/chinese/counmtg/hansard/cm0510-translate-c.pdf",
+      "http://legco.gov.hk/yr12-13/chinese/counmtg/hansard/cm0513-translate-c.pdf",
+      "http://legco.gov.hk/yr12-13/chinese/counmtg/hansard/cm0514-translate-c.pdf"
     ],
     "floor": [
       "http://legco.gov.hk/yr12-13/chinese/counmtg/floor/cm0508-confirm-ec.pdf",
       "http://legco.gov.hk/yr12-13/chinese/counmtg/floor/cm0509-confirm-ec.pdf",
-      "http://legco.gov.hk/yr12-13/chinese/counmtg/floor/cm0510-confirm-ec.pdf"
+      "http://legco.gov.hk/yr12-13/chinese/counmtg/floor/cm0510-confirm-ec.pdf",
+      "http://legco.gov.hk/yr12-13/chinese/counmtg/floor/cm0513-confirm-ec.pdf",
+      "http://legco.gov.hk/yr12-13/chinese/counmtg/floor/cm0514-confirm-ec.pdf"
     ]
   },
   {
-    "date": "2013 年 5 月 9 日^^",
+    "date": "2013 年 5 月 9 日^^註釋符號代表...行政長官答問會",
     "agenda": [
       "http://legco.gov.hk/yr12-13/chinese/counmtg/agenda/cm20130509.htm"
     ],
@@ -514,21 +524,27 @@
     ]
   },
   {
-    "date": "2013 年 5 月 15、 16、 20 及 21 日",
+    "date": "2013 年 5 月 15、16、20 及 21 日",
     "agenda": [
       "http://legco.gov.hk/yr12-13/chinese/counmtg/agenda/cm20130515.htm"
     ],
     "minutes": [
-
+      "http://legco.gov.hk/yr12-13/chinese/counmtg/minutes/cm20130515.pdf"
     ],
     "votings": [
-      "http://legco.gov.hk/yr12-13/chinese/counmtg/voting/v20130515.htm"
+
     ],
     "hansard": [
-
+      "http://legco.gov.hk/yr12-13/chinese/counmtg/hansard/cm0515-translate-c.pdf",
+      "http://legco.gov.hk/yr12-13/chinese/counmtg/hansard/cm0516-translate-c.pdf",
+      "http://legco.gov.hk/yr12-13/chinese/counmtg/hansard/cm0520-translate-c.pdf",
+      "http://legco.gov.hk/yr12-13/chinese/counmtg/hansard/cm0521-translate-c.pdf"
     ],
     "floor": [
-
+      "http://legco.gov.hk/yr12-13/chinese/counmtg/floor/cm0515-confirm-ec.pdf",
+      "http://legco.gov.hk/yr12-13/chinese/counmtg/floor/cm0516-confirm-ec.pdf",
+      "http://legco.gov.hk/yr12-13/chinese/counmtg/floor/cm0520-confirm-ec.pdf",
+      "http://legco.gov.hk/yr12-13/chinese/counmtg/floor/cm0521-confirm-ec.pdf"
     ]
   },
   {
@@ -597,7 +613,7 @@
       "http://legco.gov.hk/yr12-13/chinese/counmtg/agenda/cm20130619.htm"
     ],
     "minutes": [
-
+      "http://legco.gov.hk/yr12-13/chinese/counmtg/minutes/cm20130619.pdf"
     ],
     "votings": [
 
@@ -621,7 +637,8 @@
 
     ],
     "hansard": [
-
+      "http://legco.gov.hk/yr12-13/chinese/counmtg/hansard/cm0626-translate-c.pdf",
+      "http://legco.gov.hk/yr12-13/chinese/counmtg/hansard/cm0627-translate-c.pdf"
     ],
     "floor": [
       "http://legco.gov.hk/yr12-13/chinese/counmtg/floor/cm0626-confirm-ec.pdf",
@@ -634,13 +651,13 @@
       "http://legco.gov.hk/yr12-13/chinese/counmtg/agenda/cm20130703.htm"
     ],
     "minutes": [
-
+      "http://legco.gov.hk/yr12-13/chinese/counmtg/minutes/cm20130703.pdf"
     ],
     "votings": [
 
     ],
     "hansard": [
-
+      "http://legco.gov.hk/yr12-13/chinese/counmtg/hansard/cm0703-translate-c.pdf"
     ],
     "floor": [
       "http://legco.gov.hk/yr12-13/chinese/counmtg/floor/cm0703-confirm-ec.pdf"
@@ -652,13 +669,14 @@
       "http://legco.gov.hk/yr12-13/chinese/counmtg/agenda/cm20130710.htm"
     ],
     "minutes": [
-
+      "http://legco.gov.hk/yr12-13/chinese/counmtg/minutes/cm20130710.pdf"
     ],
     "votings": [
 
     ],
     "hansard": [
-
+      "http://legco.gov.hk/yr12-13/chinese/counmtg/hansard/cm0710-translate-c.pdf",
+      "http://legco.gov.hk/yr12-13/chinese/counmtg/hansard/cm0711-translate-c.pdf"
     ],
     "floor": [
       "http://legco.gov.hk/yr12-13/chinese/counmtg/floor/cm0710-confirm-ec.pdf",
@@ -666,18 +684,18 @@
     ]
   },
   {
-    "date": "2013 年 7 月 11 日^^",
+    "date": "2013 年 7 月 11 日^^註釋符號代表...行政長官答問會",
     "agenda": [
       "http://legco.gov.hk/yr12-13/chinese/counmtg/agenda/cm20130711.htm"
     ],
     "minutes": [
-
+      "http://legco.gov.hk/yr12-13/chinese/counmtg/minutes/cm20130711.pdf"
     ],
     "votings": [
 
     ],
     "hansard": [
-
+      "http://legco.gov.hk/yr12-13/chinese/counmtg/hansard/cm0711a-translate-c.pdf"
     ],
     "floor": [
       "http://legco.gov.hk/yr12-13/chinese/counmtg/floor/cm0711a-confirm-ec.pdf"
@@ -689,16 +707,18 @@
       "http://legco.gov.hk/yr12-13/chinese/counmtg/agenda/cm20130717.htm"
     ],
     "minutes": [
-
+      "http://legco.gov.hk/yr12-13/chinese/counmtg/minutes/cm20130717.pdf"
     ],
     "votings": [
 
     ],
     "hansard": [
-
+      "http://legco.gov.hk/yr12-13/chinese/counmtg/hansard/cm0717-translate-c.pdf",
+      "http://legco.gov.hk/yr12-13/chinese/counmtg/hansard/cm0718-translate-c.pdf"
     ],
     "floor": [
-
+      "http://legco.gov.hk/yr12-13/chinese/counmtg/floor/cm0717-confirm-ec.pdf",
+      "http://legco.gov.hk/yr12-13/chinese/counmtg/floor/cm0718-confirm-ec.pdf"
     ]
   }
 ]
